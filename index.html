@@ -17,18 +17,35 @@
             padding: 20px;
             border-radius: 10px;
             display: inline-block;
+            margin-top: 271px;
+            margin-top: 271px;
+            box-shadow: 13px 13px 62px #845fa8;
+            background: #1b0028;
         }
         button {
-            background: #61dafb;
-            border: none;
-            padding: 10px;
-            margin: 5px;
-            cursor: pointer;
-            border-radius: 5px;
+            background: #cbbfcf;
+    border: none;
+    padding: 10px;
+    box-shadow: 4px 3px 3px #9a8ca5;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
         }
+        #myVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
     </style>
 </head>
 <body>
+    <video autoplay muted loop id="myVideo">
+        <source src="background.mp4" type="video/mp4">
+    </video>
     <div class="player">
         <h2 id="song-title">Song Title</h2>
         <audio id="audio" src="songs.mp3"></audio>
@@ -40,7 +57,7 @@
     </div>
 
     <script>
-        const songs = ["song1.mp3", "song2.mp3","song"];
+        const songs = ["song1.mp3", "song2.mp3","song3.mp3"];
         let currentSongIndex = 0;
         const audio = document.getElementById("audio");
         const songTitle = document.getElementById("song-title");
